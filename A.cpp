@@ -19,7 +19,8 @@ int main(int /*argc*/, char ** /*argv*/) {
             .pEngineName = EngineName.c_str(),
             .engineVersion = 1,
             .apiVersion = vk::makeApiVersion(1, 0, 0, 0)
-            // VK_API_VERSION_1_1 模块内部的宏默认不会导出
+            // VK_API_VERSION_1_1 : macro defined within the module is NOT
+            // export by default.
         };
         // initialize the vk::InstanceCreateInfo
         vk::InstanceCreateInfo instanceCreateInfo({}, &applicationInfo);

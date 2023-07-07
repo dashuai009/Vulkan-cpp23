@@ -2,14 +2,26 @@
 
 A.cpp contains an example of cpp23.
 
-### build
+### 如何复现这个编译错误
+
+How to reproduce this compilation error
 
 env:
-vs 17.7.0 preview 2.0
-cmake 3.26
-vulkan sdk 1.3.243
+> windows 11
+> 
+> vs 17.7.0 preview 2.0
+> 
+> cmake 3.26
+> 
+> vulkan sdk 1.3.243
 
 download & build:
+
+- download and install vulkan sdk
+- pull this repo
+- add `#define VULKAN_HPP_NO_CONSTRUCTORS` in the front of `Vulkan-Hpp\vulkan\vulkan.hpp`
+  ![img](img/p1.png)
+- build:
 ```
 git clone --recurse-submodules https://github.com/dashuai009/Vulkan-cpp23.git Vulkan-cpp23
 cd Vulkan-cpp23
