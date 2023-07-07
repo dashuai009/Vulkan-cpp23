@@ -1,15 +1,18 @@
 ## vulkan-cpp23
 
-A.cpp contains an example of cpp20.
+A.cpp contains an example of cpp23.
 
 ### build
+
 env:
 vs 17.7.0 preview 2.0
 cmake 3.26
 vulkan sdk 1.3.243
 
-build:
+download & build:
 ```
+git clone --recurse-submodules https://github.com/dashuai009/Vulkan-cpp23.git Vulkan-cpp23
+cd Vulkan-cpp23
 cmake -S . -B build -G "Visual Studio 17 2022"
 cmake --build build --target vulkan-cpp23-A --config Debug -j 24
 ```
